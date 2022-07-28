@@ -1,0 +1,1 @@
+You can Check temperature of any city in the world. You just need to place city name (in English) f.e. 'Barcelona', 'Warsaw' etc.
