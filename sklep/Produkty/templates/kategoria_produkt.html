@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+    
+{% block produkt %}
+
+  
+    {% if kategoria_produkt %}
+    <div class="container">
+        <div class="row"> 
+     {% for produkt in kategoria_produkt %}
+            <div class="col-16 col-md-8 col-lg-4">
+                <div class="card">
+                    <a href="/produkty/{{produkt.id}}/"> 
+                    <img src="{{ produkt.image.url }}" width="200px" height="150px" alt="{{produkt.nazwa}}" class="card-img-top">
+                    <div class="card-body">
+                        <center><h5 class="card-title">{{produkt.nazwa}}</h5>
+                        </a>
+                        <p class="card-text" height="50px" >{{produkt.opis}}</p>
+                         <h3 class="title">{{produkt.cena}} zł</h3></center>
+                    </div>
+            </div>
+        </div>
+    {% endfor %}
+        </div>
+    </div>
+    {% else %}
+        <h1> ERROR </h1>
+    {% endif %}
+
+
+{% endblock %}

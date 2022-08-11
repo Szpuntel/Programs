@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+    {% include media %}
+{% block produkt %}
+    {% if produkt_user %}
+    <center>
+        <table>
+            <th>
+              <tr><img style="border:10px dashed black;" src="{{ produkt_user.image.url }}"></tr>
+              <tr><h1> {{produkt_user.nazwa}}</h1></tr>
+              <tr><p> {{produkt_user.opis}} </p></tr>
+              <tr><p>Producent: {{produkt_user.producent}} </p></tr>
+              <tr><h5>Cena {{produkt_user.cena}} PLN</h5></tr><br>
+              <tr><h4><a href=''>Dodaj do koszyka</a></h4></tr>
+            </th>  
+        </table>  
+    </center>
+    {% else %}
+    <p> Nie ma produktu o takim ID</p>
+    {% endif %}
+    
+{% endblock produkt %}
