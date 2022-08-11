@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+
+
+{%else%}
+ <center><h2>You need to be Logged in! To see content of this page!</h2></center>
+{%endif%}
+{% endblock content %} 
